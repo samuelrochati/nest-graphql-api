@@ -13,12 +13,12 @@ export class UserService {
 
   async createUser(data: CreateUserInput): Promise<User> {
     const user = await this.userRepository.create(data);
-    const userSave = await this.userRepository.save(user);
+    const userSaved = await this.userRepository.save(user);
 
-    if (!userSave) {
+    if (!userSaved) {
       throw new InternalServerErrorException('Problema para criar um usuário.');
     }
 
-    return userSave;
+    return userSaved;
   }
 }
