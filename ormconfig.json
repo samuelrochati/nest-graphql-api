@@ -1,0 +1,13 @@
+{
+  "type": "postgres",
+  "host": "localhost",
+  "port": 5432,
+  "username": "samuel",
+  "password": "password123",
+  "database": "nest_api",
+  "migrations": ["./src/database/typeorm/migrations/*.ts"],
+  "entities": ["./src/database/typeorm/entities/*.ts"],
+  "cli": {
+      "migrationsDir": "./src/database/typeorm/migrations"
+  }
+}
